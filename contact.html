@@ -58,6 +58,34 @@
       font-size: 1.1em;
     }
 
+    .bio ul {
+    list-style-type: none; /* Remove default bullet */
+    padding: 0; /* Remove default padding */
+    margin: 20px auto; /* Center the list */
+    max-width: 400px; /* Adjust as needed for width */
+    text-align: left; /* Align text within list items to the left */
+    }
+
+    .bio li {
+    margin-bottom: 10px; /* Add spacing between list items */
+    display: flex; /* Use flexbox for alignment */
+    align-items: flex-start; /* Align items to the top */
+    }
+
+    .bio li strong {
+    /* Style the labels (Email, LinkedIn, etc.) */
+    width: 90px; /* Adjust as needed */
+    font-weight: bold;
+    margin-right: 10px; /* Space between label and link */
+    flex-shrink: 0; /* Prevent label from shrinking */
+    }
+
+/* If you want bullets: */
+    .bio li::before {
+    content: "•"; /* Or any other bullet character */
+    margin-right: 10px;
+    }
+
     footer {
       background-color: #333;
       color: #fff;
