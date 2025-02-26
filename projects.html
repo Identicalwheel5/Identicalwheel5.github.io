@@ -123,6 +123,14 @@
       padding-left: 0px; /* might be too much here */
     }
 
+    .game-button-item { /* New style for each button item */
+      text-align: center; /* Center text within each item */
+    }
+
+    .game-button-item h4 { /* Style for the h4 within each item */
+      margin-bottom: 5px; /* Add some space between heading and button */
+    }
+
   </style>
 </head>
 <body>
@@ -140,17 +148,21 @@
   <section class="projects">
     <div class="container">
       <h2>Games</h2>
-      <h4>A Tale of Two Paw-rtners</h4>
+
       <div class="game-buttons">
-        <button class="image-button" onclick="navigateToATOTP()">
-          <img src="ATOTP.png" alt="Project 1">
-        </button>
-        <button class="image-button" onclick ="navigateToClockworkSword()">
-          <img src="ClockworkSword.png" alt="Project 2">
-        </button>
-      </div>
-      <h3>Project 2</h3>
-      <p>And here's another project I'm proud of...</p>
+        <div class="game-button-item"> <h4>A Tale of Two Paw-rtners</h4>
+          <button class="image-button" onclick="navigateToATOTP()">
+            <img src="ATOTP.png" alt="Project 1">
+          </button>
+        </div>
+
+        <div class="game-button-item"> <h4>Clockwork Sword</h4>
+          <button class="image-button" onclick="navigateToClockWorkSword()">
+            <img src="ClockworkSword.png" alt="Project 2">
+          </button>
+        </div>
+
+        </div>
     </div>
   </section>
 
