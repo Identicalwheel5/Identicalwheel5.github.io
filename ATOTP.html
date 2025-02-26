@@ -21,8 +21,8 @@
     }
 
     header {
-      background-color: #00FAFA;
-      color: #000;
+      background-color: #333;
+      color: #fff;
       padding-top: 30px;
       min-height: 70px;
       border-bottom: #77b300 3px solid;
@@ -38,6 +38,7 @@
     .ATOTP h2 {
       text-aligh: center;
       font-size: 13em;
+    }
 
     nav {
       display: flex;
@@ -57,7 +58,7 @@
     }
 
     .bio img {
-      border-radius: 10px;  /* Adjust the value as needed */
+      border-radius: 10px;
       width: 150px;
       height: 200px;
       max-width: 100%;
@@ -84,6 +85,41 @@
       bottom: 0;
       width: 100%;
     }
+    .projects h2{
+        text-align: center;
+        margin: 0;
+        font-size: 2.5em;
+    }
+    .projects img {
+        max-width: 500px;
+        height: auto;
+    }
+        /* Styles for the image button */
+        .image-button {
+            border: none;
+            background: none;
+            padding: 0;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .image-button img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .image-button:hover {
+            transform: scale(1.1);
+        }
+        /* Grid Layout for Image Buttons */
+        .game-buttons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 20px;/* Add space between text and buttons */
+            padding-left: 50px; /* might be too much here */
+        }
   </style>
 </head>
 <body>
@@ -100,16 +136,38 @@
 
   <section class="projects">
     <div class="container">
-      <h2>A Tale of Two Paw-rtners</h2>
-      <h3>Here's a description of my first project...</h3>
-      <img src="project1.jpg" alt="Project 1">
-      <h3>Project 2</h3>
-      <p>And here's another project I'm proud of...</p>
+        <h2>Games</h2>
+        <p>A Tale of Two Paw-tners</p>
+        <div class="game-buttons">
+            <button class="image-button" onclick="navigateToATOTP()">
+                <img src="ATOTP.png" alt="Project 1">
+            </button>
+            <button class="image-button">
+                <img src="your-second-image.png" alt="Project 2">
+            </button>
+        </div>
+        <h3>Project 2</h3>
+        <p>And here's another project I'm proud of...</p>
     </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Erick Callisaya. All Rights Reserved.</p>
   </footer>
+
+  <script>
+    function navigateToATOTP() {
+      window.location.href = "ATOTP.html";
+    }
+    function navigateToDOBP(){
+      window.location.href = "DOBP.html";
+    }
+    function navigateToClockWorkSword(){
+      window.location.href = "ClockworkSword.html";
+    }
+    function navigateTo3dPrints(){
+      window.location.href = "3dPrints";
+    }
+  </script>
 </body>
 </html>
