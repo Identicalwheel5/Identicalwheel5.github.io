@@ -94,32 +94,7 @@
         max-width: 500px;
         height: auto;
     }
-        /* Styles for the image button */
-        .image-button {
-            border: none;
-            background: none;
-            padding: 0;
-            cursor: pointer;
-            transition: transform 0.2s ease-in-out;
-        }
 
-        .image-button img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-        }
-
-        .image-button:hover {
-            transform: scale(1.1);
-        }
-        /* Grid Layout for Image Buttons */
-        .game-buttons {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            margin-top: 20px;/* Add space between text and buttons */
-            padding-left: 50px; /* might be too much here */
-        }
   </style>
 </head>
 <body>
@@ -138,13 +113,8 @@
     <div class="container">
         <h2>Games</h2>
         <p>A Tale of Two Paw-tners</p>
-        <div class="game-buttons">
-            <button class="image-button" onclick="navigateToATOTP()">
-                <img src="ATOTP.png" alt="Project 1">
-            </button>
-            <button class="image-button">
-                <img src="your-second-image.png" alt="Project 2">
-            </button>
+        <div style="display: flex; justify-content: center;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <h3>Project 2</h3>
         <p>And here's another project I'm proud of...</p>
@@ -154,20 +124,5 @@
   <footer>
     <p>&copy; 2025 Erick Callisaya. All Rights Reserved.</p>
   </footer>
-
-  <script>
-    function navigateToATOTP() {
-      window.location.href = "ATOTP.html";
-    }
-    function navigateToDOBP(){
-      window.location.href = "DOBP.html";
-    }
-    function navigateToClockWorkSword(){
-      window.location.href = "ClockworkSword.html";
-    }
-    function navigateTo3dPrints(){
-      window.location.href = "3dPrints";
-    }
-  </script>
 </body>
 </html>
