@@ -75,6 +75,31 @@
       bottom: 0;
       width: 100%;
     }
+
+    /* Styles for the image button */
+    .image-button {
+      border: none;
+      background: none;
+      padding: 0;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .image-button img {
+      display: block;
+      max-width: 100%; /* Ensure the image scales within its container */
+      height: auto;
+    }
+
+    .image-button:hover {
+      transform: scale(1.1);
+    }
+
+    .projects img{
+        max-width: 500px;
+        height: auto;
+    }
+
   </style>
 </head>
 <body>
@@ -93,7 +118,9 @@
     <div class="container">
       <h2>My Projects</h2>
       <p>Here's a description of my first project...</p>
-      <img src="ATOTP.png" alt="Project 1">
+      <button class="image-button">
+        <img src="ATOTP.png" alt="Project 1">
+      </button>
       <h3>Project 2</h3>
       <p>And here's another project I'm proud of...</p>
     </div>
