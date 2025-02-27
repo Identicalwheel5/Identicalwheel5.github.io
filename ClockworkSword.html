@@ -82,27 +82,45 @@
       max-width: 300px;
     }
 
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      bottom: 0;
-      width: 100%;
-      position: relative;
-    }
-    .projects h2{
+    /* CSS for larger screens (e.g., desktops) */
+    @media (min-width: 768px) { /* Adjust the breakpoint as needed */
+      footer {
+        background-color: #333;
+        color: #fff;
         text-align: center;
-        margin: 0;
-        font-size: 2.5em;
+        padding: 20px;
+        position: fixed; /* Sticky footer for larger screens */
+        bottom: 0;
+        width: 100%;
+      }
     }
+
+    /* CSS for smaller screens (e.g., mobile) */
+    @media (max-width: 767px) { /* Adjust the breakpoint as needed */
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        position: static; /* Regular footer for smaller screens */
+        width: 100%;
+      }
+    }
+
+    .projects h2 {
+      text-align: center;
+      margin: 0;
+      font-size: 2.5em;
+    }
+
     .projects img {
-        max-width: 500px;
-        height: auto;
+      max-width: 500px;
+      height: auto;
     }
 
   </style>
 </head>
+
 <body>
   <header>
     <div class="container">
@@ -117,17 +135,17 @@
 
   <section class="projects">
     <div class="container">
-        <h2>Clockwork Sword</h2>
-        <h3>Dismantle swarms of unique enemies to loot powerful weapon components.  Craft and customize your modular clockwork sword with endless combinations of gears, forms, and charges. Unleash devastating attacks in this isometric action game.</h3>
-        <div style="display: flex; justify-content: center;">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/2t8JvuDimqQ?si=cXIN-nV7WvpvGGsa&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <h3>Project 2</h3>  
+      <h2>Clockwork Sword</h2>
+      <h3>Dismantle swarms of unique enemies to loot powerful weapon components. Craft and customize your modular clockwork sword with endless combinations of gears, forms, and charges. Unleash devastating attacks in this isometric action game.</h3>
+      <div style="display: flex; justify-content: center;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2t8JvuDimqQ?si=cXIN-nV7WvpvGGsa&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <h3>Project 2</h3>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Erick Callisaya. All Rights Reserved.</p>
+    <p>© 2025 Erick Callisaya. All Rights Reserved.</p>
   </footer>
 </body>
 </html>
