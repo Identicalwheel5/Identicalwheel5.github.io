@@ -5,132 +5,139 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Erick Callisaya - Projects</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
 
-    .container {
-      width: 80%;
-      margin: auto;
-      overflow: hidden;
-    }
+  .container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+  }
 
-    header {
-      background-color: #333;
-      color: #fff;
-      padding-top: 30px;
-      min-height: 70px;
-      border-bottom: #77b300 3px solid;
-    }
+  header {
+    background-color: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77b300 3px solid;
+  }
 
-    header h1 {
-      text-align: center;
-      text-transform: uppercase;
-      margin: 0;
-      font-size: 2em;
-    }
+  header h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 2em;
+  }
 
-    .projects h2{
-      text-align: center;
-      margin: 0;
-      font-size: 3em;
-    }
+  .projects h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 3em;
+  }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
-    }
+  nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 15px 20px;
-    }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+  }
 
-    .bio {
-      text-align: center;
-      padding: 20px;
-    }
+  .bio {
+    text-align: center;
+    padding: 20px;
+  }
 
-    .bio img {
-      border-radius: 10px;
-      width: 150px;
-      height: 200px;
-      max-width: 100%;
-      max-height: 100%;
-    }
+  .bio img {
+    border-radius: 10px;
+    width: 150px;
+    height: 200px;
+    max-width: 100%;
+    max-height: 100%;
+  }
 
-    .bio p {
-      max-width: 600px;
-      margin: 20px auto;
-      font-size: 1.1em;
-    }
+  .bio p {
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 1.1em;
+  }
 
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      bottom: 0;
-      width: 100%;
-    }
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    bottom: 0;
+    width: 100%;
+  }
 
-    .ATOTP h4 {
-      text-indent: 800px;
-      font-size: 2em;
-    }
+  .ATOTP h4 {
+    text-indent: 800px;
+    font-size: 2em;
+  }
 
-    /* Styles for the image button */
-    .image-button {
-      border: none;
-      background: none;
-      padding: 0;
-      margin: 0;
-      cursor: pointer;
-      transition: transform 0.2s ease-in-out;
-      display: inline-block;
-    }
+  .image-button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    display: inline-block;
+  }
 
-    .image-button img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
+  .image-button img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
 
-    .image-button:hover {
-      transform: scale(1.1);
-    }
+  .image-button:hover {
+    transform: scale(1.1);
+  }
 
-    .projects img {
-      max-width: 500px;
-      height: auto;
-    }
+  .projects img {
+    max-width: 500px;
+    height: auto;
+  }
 
-    /* Grid Layout for Image Buttons */
+  .game-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
+    padding-left: 0px;
+  }
+
+  .game-button-item {
+    text-align: center;
+  }
+
+  .game-button-item h4 {
+    margin-bottom: 15px;
+  }
+
+  /* Media Query for smaller screens */
+  @media (max-width: 768px) {
     .game-buttons {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin-top: 20px;/* Add space between text and buttons */
-      margin-left: 50px;
-      padding-left: 0px; /* might be too much here */
+      grid-template-columns: 1fr; /* Switch to a single column */
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
     }
-
-    .game-button-item { /* New style for each button item */
-      text-align: center; /* Center text within each item */
-    }
-
-    .game-button-item h4 { /* Style for the h4 within each item */
-      margin-bottom: 15px; /* Add some space between heading and button */
-    }
-
-  </style>
+  }
+</style>
 </head>
 <body>
   <header>
