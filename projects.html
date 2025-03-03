@@ -128,10 +128,16 @@
     margin-bottom: 15px;
   }
 
-  /* Media Query for smaller screens */
-  @media (max-width: 768px) {
+  /* Responsive image scaling */
+  .game-button-item img {
+    max-width: 100%; /* Ensure images scale down */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Media Query for smaller screens (adjusted breakpoint) */
+  @media (max-width: 600px) { /* Adjust breakpoint if needed */
     .game-buttons {
-      grid-template-columns: 1fr; /* Switch to a single column */
+      grid-template-columns: 1fr;
       margin-left: auto;
       margin-right: auto;
       width: 80%;
