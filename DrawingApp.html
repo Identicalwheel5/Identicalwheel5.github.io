@@ -7,6 +7,17 @@
     <link rel="icon" type="image/png" href="computer emoji.png" />
     <title>Erick Callisaya - Projects</title>
     <style>
+        /* Box-sizing fix */
+        html {
+            box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -41,7 +52,6 @@
             margin-top: 100px;
             margin-bottom: 100px;
             text-align: center;
-            margin: 0;
             font-size: 13em;
         }
 
@@ -119,7 +129,7 @@
             gap: 10px;
             margin-top: 20px;
             margin: 20px auto;
-            margin-bottom: 100px; /* Add bottom margin */
+            margin-bottom: 100px;
         }
 
         .image-grid img {
@@ -248,6 +258,18 @@
 
     <section class="projects">
         <div class="container">
+            <h2>Image Gallery</h2>
+            <div>
+                <img src="DrawingApp/Capture6.PNG" alt="Image 1">
+                <img src="DrawingApp/Capture5.PNG" alt="Image 2">
+                <img src="DrawingApp/Capture4.PNG" alt="Image 3">
+                <img src="DrawingApp/Capture3.PNG" alt="Image 4">
+            </div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
             <div class="image-text-item">
                 <img src="DrawingApp/Firebase.png" alt="Image 5">
                 <div>
@@ -262,18 +284,6 @@
                         authentication features were also useful by providing the tools to manage user accounts. This
                         likely involved methods to create user accounts and manage user sign-in.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="projects">
-        <div class="container">
-            <h2>Image Gallery</h2>
-            <div>
-                <img src="DrawingApp/Capture6.PNG" alt="Image 1">
-                <img src="DrawingApp/Capture5.PNG" alt="Image 2">
-                <img src="DrawingApp/Capture4.PNG" alt="Image 3">
-                <img src="DrawingApp/Capture3.PNG" alt="Image 4">
             </div>
         </div>
     </section>
