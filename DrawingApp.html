@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -106,7 +107,7 @@
         }
 
         .projects img {
-            max-width: 100%; /* Make projects images responsive */
+            max-width: 100%;
             height: auto;
         }
 
@@ -116,11 +117,11 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
             margin-top: 20px;
-            margin: 20px auto; /* Centering fix */
+            margin: 20px auto;
         }
 
         .image-grid img {
-            max-width: 100%; /* Make grid images responsive */
+            max-width: 100%;
             height: auto;
             display: block;
         }
@@ -142,17 +143,17 @@
         }
 
         .image-text-grid img {
-            max-width: 100%; /* Make image-text grid images responsive */
+            max-width: 100%;
             height: auto;
             display: block;
         }
 
         .image-text-item {
             display: flex;
-            align-items: center; /* Vertically center content */
+            align-items: center;
         }
 
-        .image-text-item div{
+        .image-text-item div {
             margin-left: 10px;
         }
 
@@ -161,27 +162,60 @@
             .image-text-grid {
                 grid-template-columns: 1fr;
             }
+
             .image-text-item {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
             }
-            .image-text-item div{
+
+            .image-text-item div {
                 margin-left: 0px;
             }
         }
 
-        iframe{
+        iframe {
             margin: auto;
         }
 
-        /* Limit image size in image-text-item */
+        /* Flexbox layout for image-text-item */
+        .image-text-item {
+            display: flex;
+            align-items: center;
+        }
+
         .image-text-item img {
-            max-width: 100%; /* Adjust this value as needed */
+            max-width: 50%;
             height: auto;
+            flex: 0 0 50%;
+            margin-right: 20px;
+        }
+
+        .image-text-item div {
+            flex: 1;
+        }
+
+        /* Media Query for smaller screens */
+        @media (max-width: 600px) {
+            .image-text-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .image-text-item img {
+                max-width: 100%;
+                flex: 0 0 auto;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .image-text-item div {
+                margin-left: 0;
+            }
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -197,9 +231,13 @@
     <section class="projects">
         <div class="container">
             <h2>Android Drawing App</h2>
-            <h3>Android drawing app created in one semester by Patrick Bernhard, Bryn Ballard, and Erick Callisaya using Kotlin in Android Studio.</h3>
+            <h3>Android drawing app created in one semester by Patrick Bernhard, Bryn Ballard, and Erick Callisaya using Kotlin in
+                Android Studio.</h3>
             <div style="display: flex; justify-content: center;">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/xtzntqfxYJQ?si=bpzW3PiIZk7gM6NP&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xtzntqfxYJQ?si=bpzW3PiIZk7gM6NP&autoplay=1&mute=1"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
     </section>
@@ -222,7 +260,15 @@
                 <img src="DrawingApp/Firebase.png" alt="Image 5">
                 <div>
                     <h3>Firebase Integration</h3>
-                    <p>In our Android drawing app project, a core requirement was the ability to save and upload drawing files, which we addressed using Google Firebase. Firebase offers a suite of cloud-based tools, simplifying the complexities of backend development. For file storage, We utilized Firebase's "Storage" service, which acts as a virtual file system, enabling the storage and retrieval of files like our drawing data. To upload these files, the app used references to define file paths within the storage. Firebase also allowed me to implement robust access control using security rules, ensuring user data was protected. These rules, similar to JSON, define who has permission to read and write data. Firebase's authentication features were also useful by providing the tools to manage user accounts. This likely involved methods to create user accounts and manage user sign-in.</p>
+                    <p>In our Android drawing app project, a core requirement was the ability to save and upload drawing files,
+                        which we addressed using Google Firebase. Firebase offers a suite of cloud-based tools, simplifying
+                        the complexities of backend development. For file storage, We utilized Firebase's "Storage" service,
+                        which acts as a virtual file system, enabling the storage and retrieval of files like our drawing data.
+                        To upload these files, the app used references to define file paths within the storage. Firebase also
+                        allowed me to implement robust access control using security rules, ensuring user data was protected.
+                        These rules, similar to JSON, define who has permission to read and write data. Firebase's
+                        authentication features were also useful by providing the tools to manage user accounts. This
+                        likely involved methods to create user accounts and manage user sign-in.</p>
                 </div>
             </div>
         </div>
@@ -232,4 +278,5 @@
         <p>© 2025 Erick Callisaya. All Rights Reserved.</p>
     </footer>
 </body>
+
 </html>
