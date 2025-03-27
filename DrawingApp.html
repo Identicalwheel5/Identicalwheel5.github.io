@@ -148,7 +148,7 @@
         align-items: center; /* Vertically center content */
     }
 
-    .image-text-item div{
+    .image-text-item div {
         margin-left: 10px;
     }
 
@@ -157,27 +157,41 @@
         .image-text-grid {
             grid-template-columns: 1fr;
         }
+
         .image-text-item {
             flex-direction: column;
             align-items: center;
             text-align: center;
         }
-        .image-text-item div{
+
+        .image-text-item div {
             margin-left: 0px;
         }
     }
 
-    iframe{
+    iframe {
         margin: auto;
     }
 
     /* Increase image size in image-text-item */
     .image-text-item img {
-        max-width: 800px; /* Adjust as needed */
+        max-width: 800px;
         height: auto;
         margin-right: 100px;
     }
 
+    /* Responsive Image Styles */
+    img {
+        max-width: 100%; /* Make all images responsive */
+        height: auto;
+    }
+
+    /* Adjustments for smaller screens */
+    @media (max-width: 768px) {
+        .image-text-item img {
+            margin-right: 0; /* Remove right margin on smaller screens */
+        }
+    }
 </style>
 </head>
 <body>
