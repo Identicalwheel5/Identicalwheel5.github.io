@@ -6,171 +6,178 @@
     <link rel="icon" type="image/png" href="computer emoji.png" />
     <title>Erick Callisaya - Projects</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
 
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
+    .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+    }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #77b300 3px solid;
-        }
+    header {
+        background-color: #333;
+        color: #fff;
+        padding-top: 30px;
+        min-height: 70px;
+        border-bottom: #77b300 3px solid;
+    }
 
-        header h1 {
-            text-align: center;
-            text-transform: uppercase;
-            margin: 0;
-            font-size: 2em;
-        }
+    header h1 {
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0;
+        font-size: 2em;
+    }
 
-        h2 {
-            text-align: center;
-            font-size: 13em;
-        }
+    h2 {
+        text-align: center;
+        font-size: 13em;
+    }
 
-        h3 {
-            text-align: center;
-            font-Size: 1.33em;
-        }
+    h3 {
+        text-align: center;
+        font-Size: 1.33em;
+    }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-        }
+    nav {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+    }
 
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 15px 20px;
-        }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 15px 20px;
+    }
 
-        .bio {
-            text-align: center;
-            padding: 20px;
-        }
+    .bio {
+        text-align: center;
+        padding: 20px;
+    }
 
-        .bio img {
-            border-radius: 10px;
-            width: 150px;
-            height: 200px;
-            max-width: 100%;
-            max-height: 100%;
-        }
+    .bio img {
+        border-radius: 10px;
+        width: 150px;
+        height: 200px;
+        max-width: 100%;
+        max-height: 100%;
+    }
 
-        .bio p {
-            max-width: 600px;
-            margin: 20px auto;
-            font-size: 1.1em;
-        }
+    .bio p {
+        max-width: 600px;
+        margin: 20px auto;
+        font-size: 1.1em;
+    }
 
-        .ATOTP h3 {
-            font-size: 8em;
-            text-align: center;
-            max-width: 150px;
-        }
+    .ATOTP h3 {
+        font-size: 8em;
+        text-align: center;
+        max-width: 150px;
+    }
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            bottom: 0;
-            width: 100%;
-            position: relative;
-        }
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        bottom: 0;
+        width: 100%;
+        position: relative;
+    }
 
-        .projects h2,
-        .image-grid h2,
-        .image-text-grid h2 {
-            text-align: center;
-            margin: 0;
-            font-size: 2.5em;
-        }
+    .projects h2,
+    .image-grid h2,
+    .image-text-grid h2 {
+        text-align: center;
+        margin: 0;
+        font-size: 2.5em;
+    }
 
-        .projects img {
-            max-width: 500px;
-            height: auto;
-        }
+    .projects img {
+        max-width: 500px;
+        height: auto;
+    }
 
-        /* Styles for the image grid */
+    /* Styles for the image grid */
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 20px;
+        margin: 20px auto; /* Centering fix */
+    }
+
+    .image-grid img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Media Query for smaller screens */
+    @media (max-width: 600px) {
         .image-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            margin-top: 20px;
-            margin: 20px auto; /* Centering fix */
+            grid-template-columns: 1fr;
+            width: 80%;
         }
+    }
 
-        .image-grid img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
+    /* Styles for the image-text grid */
+    .image-text-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 20px;
+    }
 
-        /* Media Query for smaller screens */
-        @media (max-width: 600px) {
-            .image-grid {
-                grid-template-columns: 1fr;
-                width: 80%;
-            }
-        }
+    .image-text-grid img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
 
-        /* Styles for the image-text grid */
+    .image-text-item {
+        display: flex;
+        align-items: center; /* Vertically center content */
+    }
+
+    .image-text-item div{
+        margin-left: 10px;
+    }
+
+    /* Media Query for smaller screens */
+    @media (max-width: 600px) {
         .image-text-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 20px;
+            grid-template-columns: 1fr;
         }
-
-        .image-text-grid img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
         .image-text-item {
-            display: flex;
-            align-items: center; /* Vertically center content */
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
-
         .image-text-item div{
-            margin-left: 10px;
+            margin-left: 0px;
         }
+    }
 
-        /* Media Query for smaller screens */
-        @media (max-width: 600px) {
-            .image-text-grid {
-                grid-template-columns: 1fr;
-            }
-            .image-text-item {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            .image-text-item div{
-                margin-left: 0px;
-            }
-        }
+    iframe{
+        margin: auto;
+    }
 
-        iframe{
-            margin: auto;
-        }
-    </style>
+    /* Increase image size in image-text-item */
+    .image-text-item img {
+        max-width: 300px; /* Adjust as needed */
+        height: auto;
+    }
+
+</style>
 </head>
 <body>
     <header>
@@ -216,7 +223,7 @@
                     <p>In our Android drawing app project, a core requirement was the ability to save and upload drawing files, which we addressed using Google Firebase. Firebase offers a suite of cloud-based tools, simplifying the complexities of backend development. For file storage, We utilized Firebase's "Storage" service, which acts as a virtual file system, enabling the storage and retrieval of files like our drawing data. To upload these files, the app used references to define file paths within the storage. Firebase also allowed me to implement robust access control using security rules, ensuring user data was protected. These rules, similar to JSON, define who has permission to read and write data. Firebase's authentication features were also useful by providing the tools to manage user accounts. This likely involved methods to create user accounts and manage user sign-in.</p>
                 </div>
             </div>
-            <div class="image-text-item">
+            <div class="projects">
                 <img src="image6.png" alt="Image 6">
                 <div>
                     <h3>Another Image Title</h3>
