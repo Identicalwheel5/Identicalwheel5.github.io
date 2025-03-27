@@ -36,7 +36,7 @@
             font-size: 2em;
         }
 
-        h2 {
+        .ATOTP h2 {
             text-align: center;
             font-size: 13em;
         }
@@ -77,7 +77,7 @@
             font-size: 1.1em;
         }
 
-        h3 {
+        .ATOTP h3 {
             font-size: 8em;
             text-align: center;
             max-width: 150px;
@@ -184,6 +184,7 @@
         </div>
     </header>
 
+    <section class="projects">
         <div class="container">
             <h2>Android Drawing App</h2>
             <h3>Android drawing app created in one semester by Patrick Bernhard, Bryn Ballard, and Erick Callisaya using Kotlin in Android Studio.</h3>
@@ -191,8 +192,9 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/xtzntqfxYJQ?si=bpzW3PiIZk7gM6NP&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
-    
+    </section>
 
+    <section class="image-grid">
         <div class="container">
             <h2>Image Gallery</h2>
             <div>
@@ -202,14 +204,16 @@
                 <img src="DrawingApp/Capture3.PNG" alt="Image 4">
             </div>
         </div>
+    </section>
 
+    <section class="image-text-grid">
         <div class="container">
             <h2>Image with Text</h2>
             <div class="image-text-item">
                 <img src="DrawingApp/Firebase.png" alt="Image 5">
                 <div>
                     <h3>Image Title</h3>
-                    <p>In our Android drawing app project, a key feature was the ability to save and upload drawing files. To achieve this, we implemented Google Firebase for cloud storage. Firebase provides a "Storage" service, which essentially acts as a file system in the cloud. We utilized this Firebase Storage to handle the uploading of the drawing files, using references to define the storage paths and manage the data.  Furthermore, we incorporated Firebase's access control features, defining rules to manage how users could access these stored files.</p>
+                    <p>In our Android drawing app project, a core requirement was the ability to save and upload drawing files, which we addressed using Google Firebase. Firebase offers a suite of cloud-based tools, simplifying the complexities of backend development. For file storage, We utilized Firebase's "Storage" service, which acts as a virtual file system, enabling the storage and retrieval of files like our drawing data. To upload these files, the app used references to define file paths within the storage. Firebase also allowed me to implement robust access control using security rules, ensuring user data was protected. These rules, similar to JSON, define who has permission to read and write data. Firebase's authentication features were also useful by providing the tools to manage user accounts. This likely involved methods to create user accounts and manage user sign-in.</p>
                 </div>
             </div>
             <div class="image-text-item">
@@ -220,6 +224,7 @@
                 </div>
             </div>
         </div>
+    </section>
 
     <footer>
         <p>© 2025 Erick Callisaya. All Rights Reserved.</p>
