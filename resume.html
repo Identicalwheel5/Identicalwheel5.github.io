@@ -1,1 +1,88 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="computer emoji.png" sizes="32x32" />
+    <title>Erick Callisaya - Resume</title>
+    
+    <!-- Linking to the external stylesheet for common styles -->
+    <link rel="stylesheet" href="mainStyle.css">
+
+    <!-- Unique Styles for the Resume Viewer -->
+    <style>
+        /* Ensures the resume content section takes up vertical space */
+        .resume-content {
+            padding: 20px;
+            min-height: calc(100vh - 150px); /* Adjust height to prevent content from going under the fixed footer */
+            text-align: center;
+        }
+
+        .resume-content h2 {
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #333;
+        }
+
+        /* Styling for the PDF viewer (iframe) */
+        .pdf-viewer {
+            width: 100%;
+            /* Calculate height to fill the screen minus header, footer, and padding */
+            height: 100vh; 
+            max-height: 800px; /* Cap the height for desktop viewing */
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 0 auto; /* Center the viewer */
+        }
+
+        /* Responsive adjustment for iframe */
+        @media (max-width: 768px) {
+            .pdf-viewer {
+                height: 70vh; /* Shorter height on mobile */
+                max-height: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Erick Callisaya</h1>
+            <nav>
+                <a href="index.html">About Me</a>
+                <!-- Current page is highlighted by being last in the list, though you may want to apply an 'active' class in CSS -->
+                <a href="resume.html">Resume</a> 
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="resume-content" id="resume"> 
+        <div class="container">
+            <h2>Professional Resume</h2>
+            
+            <!-- PDF Viewer using iframe -->
+            <iframe 
+                class="pdf-viewer"
+                src="softwareEngineerResume.pdf"
+                title="Erick Callisaya Software Engineer Resume"
+                type="application/pdf"
+            >
+                <!-- Fallback content for browsers that don't support iframes or PDF viewing -->
+                <p>
+                    Your browser does not support PDF viewing. You can download the resume here:
+                    <a href="softwareEngineerResume.pdf" download>Download Resume (PDF)</a>
+                </p>
+            </iframe>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Erick Callisaya. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
