@@ -1,115 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Erick Callisaya - Homepage</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="computer emoji.png" sizes="32x32" />
+    <title>Erick Callisaya - Contact</title>
+    
+    <link rel="stylesheet" href="mainStyle.css">
 
-    .container {
-      width: 80%;
-      margin: auto;
-      overflow: hidden;
-    }
+    <style>
+        .bio ul {
+            list-style-type: none; /* Remove default bullet */
+            padding: 0; /* Remove default padding */
+            margin: 20px auto; /* Center the list */
+            max-width: 400px; /* Adjust as needed for width */
+            text-align: left; /* Align text within list items to the left */
+        }
 
-    header {
-      background-color: #333;
-      color: #fff;
-      padding-top: 30px;
-      min-height: 70px;
-      border-bottom: #77b300 3px solid;
-    }
+        .bio li {
+            margin-bottom: 10px; /* Add spacing between list items */
+            display: flex; /* Use flexbox for alignment */
+            align-items: flex-start; /* Align items to the top */
+        }
 
-    header h1 {
-      text-align: center;
-      text-transform: uppercase;
-      margin: 0;
-      font-size: 2em;
-    }
+        .bio li strong {
+            /* Style the labels (Email, LinkedIn, etc.) */
+            width: 90px; /* Adjust as needed */
+            font-weight: bold;
+            margin-right: 10px; /* Space between label and link */
+            flex-shrink: 0; /* Prevent label from shrinking */
+        }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
-    }
+        /* If you want bullets: */
+        .bio li::before {
+            content: "•"; /* Or any other bullet character */
+            margin-right: 10px;
+        }
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 15px 20px;
-    }
-
-    .bio {
-      text-align: center;
-      padding: 20px;
-    }
-
-    .bio p {
-      max-width: 600px;
-      margin: 20px auto;
-      font-size: 1.1em;
-    }
-
-    .bio ul {
-    list-style-type: none; /* Remove default bullet */
-    padding: 0; /* Remove default padding */
-    margin: 20px auto; /* Center the list */
-    max-width: 400px; /* Adjust as needed for width */
-    text-align: left; /* Align text within list items to the left */
-    }
-
-    .bio li {
-    margin-bottom: 10px; /* Add spacing between list items */
-    display: flex; /* Use flexbox for alignment */
-    align-items: flex-start; /* Align items to the top */
-    }
-
-    .bio li strong {
-    /* Style the labels (Email, LinkedIn, etc.) */
-    width: 90px; /* Adjust as needed */
-    font-weight: bold;
-    margin-right: 10px; /* Space between label and link */
-    flex-shrink: 0; /* Prevent label from shrinking */
-    }
-
-/* If you want bullets: */
-    .bio li::before {
-    content: "•"; /* Or any other bullet character */
-    margin-right: 10px;
-    }
-
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
+        /*
+        * NOTE on Footer: If you're using 'mainStyle.css' from the first file,
+        * the footer will still be 'position: fixed'. If you don't want that on 
+        * the contact page, you'd need to override the 'footer' rule here,
+        * but I've left it out to respect your original style rules.
+        */
+    </style>
 </head>
 <body>
     <header>
-      <h1>Erick Callisaya</h1>
-      <nav>
-        <a href="index.html">About Me</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-        </header>
-
-    <section class="bio" id="about">
         <div class="container">
-            <h2>Let's Connect!</h2>  <p>
+            <h1>Erick Callisaya</h1>
+            <nav>
+                <a href="index.html">About Me</a>
+                <a href="resume.html">Resume</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="bio" id="contact"> 
+        <div class="container">
+            <h2>Let's Connect!</h2>
+            <p>
                 Feel free to reach out to me through any of the following channels:
             </p>
             <ul>
@@ -127,7 +79,7 @@
     </section>
 
     <footer>
-      <p>&copy; 2025 Erick Callisaya. All Rights Reserved.</p>
-        </footer>
+        <p>&copy; 2025 Erick Callisaya. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
