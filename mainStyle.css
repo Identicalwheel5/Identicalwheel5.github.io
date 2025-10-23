@@ -34,6 +34,8 @@ body {
       padding: 10px 0;
         /* Allows links to wrap to the next line if the screen is too narrow */
       flex-wrap: wrap; 
+      text-align: center; /* Ensures text inside the button is centered */
+
 }
 
       nav a {
