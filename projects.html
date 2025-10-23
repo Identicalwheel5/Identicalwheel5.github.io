@@ -1,254 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Erick Callisaya - Projects</title>
-  <style>
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="computer emoji.png" sizes="32x32" />
+    <title>Erick Callisaya - Projects</title>
+    
+    <link rel="stylesheet" href="mainStyle.css">
 
-  .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-  }
+    <style>
+        .projects h2 {
+            text-align: center;
+            margin: 0;
+            font-size: 3em;
+        }
 
-  header {
-    background-color: #333;
-    color: #fff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #77b300 3px solid;
-  }
+        /* Unique Style that was likely unnecessary/broken in original CSS. Removed 'bio' styles. */
+        /* .ATOTP h4 { 
+            text-indent: 800px;
+            font-size: 2em;
+        } */
 
-  header h1 {
-    text-align: center;
-    text-transform: uppercase;
-    margin: 0;
-    font-size: 2em;
-  }
+        .image-button {
+            border: none;
+            background: none;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+            display: inline-block;
+        }
 
-  .projects h2 {
-    text-align: center;
-    margin: 0;
-    font-size: 3em;
-  }
+        .image-button img {
+            display: block;
+            max-height: 375px;
+            max-width: 250px;
+            height: auto;
+            border-radius: 8px; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-  nav {
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-  }
+        .image-button:hover {
+            transform: scale(1.05); 
+        }
 
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 15px 20px;
-  }
+        .game-buttons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px; 
+            margin-top: 40px;
+            padding: 0 50px; 
+        }
 
-  .bio {
-    text-align: center;
-    padding: 20px;
-  }
+        .game-button-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
-  .bio img {
-    border-radius: 10px;
-    width: 150px;
-    height: 200px;
-    max-width: 100%;
-    max-height: 100%;
-  }
+        .game-button-item h4 {
+            margin-bottom: 20px;
+            font-size: 1.5em; 
+            font-weight: bold;
+        }
 
-  .bio p {
-    max-width: 600px;
-    margin: 20px auto;
-    font-size: 1.1em;
-  }
+        .game-button-item img {
+            max-width: 100%;
+            height: auto;
+        }
 
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    bottom: 0;
-    width: 100%;
-  }
-
-  .ATOTP h4 {
-    text-indent: 800px;
-    font-size: 2em;
-  }
-
-  .image-button {
-    border: none;
-    background: none;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-    display: inline-block;
-  }
-
-  .image-button img {
-    display: block;
-    max-height: 375px;
-    max-width: 250px;
-    height: auto;
-  }
-
-  .image-button:hover {
-    transform: scale(1.1);
-  }
-
-  .projects img {
-    max-width: 500px;
-    height: auto;
-  }
-
-  .game-buttons {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin-top: 20px;
-    margin-left: 50px;
-    padding-left: 0px;
-  }
-
-  .game-button-item {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
-  .game-button-item h4 {
-    margin-bottom: 20px;
-    font-size: 1.2em;
-  }
-
-  /* Responsive image scaling */
-  .game-button-item img {
-    max-width: 100%; /* Ensure images scale down */
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  /* Media Query for smaller screens (adjusted breakpoint) */
-  @media (max-width: 600px) { /* Adjust breakpoint if needed */
-    .game-buttons {
-      grid-template-columns: 1fr;
-      margin-left: auto;
-      margin-right: auto;
-      width: 80%;
-    }
-  }
-</style>
+        @media (max-width: 600px) { 
+            .game-buttons {
+                grid-template-columns: 1fr; 
+                gap: 30px;
+                padding: 0 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Erick Callisaya</h1>
-      <nav>
-        <a href="index.html">About Me</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="projects">
-    <div class="container">
-      <h2>CS Projects</h2>
-
-      <div class="game-buttons">
-        <div class="game-button-item"> <h4>Mobile Drawing App</h4>
-          <button class="image-button" onclick="navigateToDrawingApp()">
-            <img src="DrawingApp/ColorPalette.png" alt="Project 20">
-          </button>
+    <header>
+        <div class="container">
+            <h1>Erick Callisaya</h1>
+            <nav>
+                <a href="index.html">About Me</a>
+                <a href="resume.html">Resume</a> <!-- Included Resume link for navigation consistency -->
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </nav>
         </div>
+    </header>
 
-        <div class="game-button-item"> <h4>Clockwork Sword</h4>
-          <button class="image-button" onclick="navigateToClockworkSword()">
-            <img src="ClockworkSword.png" alt="Project 21">
-          </button>
+    <section class="projects">
+        <div class="container">
+            <h2>CS Projects</h2>
+
+            <div class="game-buttons">
+                <div class="game-button-item"> <h4>Mobile Drawing App</h4>
+                    <button class="image-button" onclick="navigateToDrawingApp()">
+                        <img src="DrawingApp/ColorPalette.png" alt="Mobile Drawing App Screenshot">
+                    </button>
+                </div>
+
+                <div class="game-button-item"> <h4>Clockwork Sword</h4>
+                    <button class="image-button" onclick="navigateToClockworkSword()">
+                        <img src="ClockworkSword.png" alt="Clockwork Sword Game Screenshot">
+                    </button>
+                </div>
+
+                <div class="game-button-item"> <h4>Die-or-Beat Pharma</h4>
+                    <button class="image-button" onclick="navigateToDOBP()">
+                        <img src="DOBP.png" alt="Die-or-Beat Pharma Screenshot">
+                    </button>
+                </div>
+
+            </div>
         </div>
+    </section>
 
-        <div class="game-button-item"> <h4>Die-or-Beat Pharma</h4>
-          <button class="image-button" onclick="navigateToDOBP()">
-            <img src="DOBP.png" alt="Project 22">
-          </button>
+    <section class="projects">
+        <div class="container">
+            <h2>Games</h2>
+
+            <div class="game-buttons">
+                <div class="game-button-item"> <h4>A Tale of Two Paw-rtners</h4>
+                    <button class="image-button" onclick="navigateToATOTP()">
+                        <img src="ATOTP.png" alt="A Tale of Two Paw-rtners Game Screenshot">
+                    </button>
+                </div>
+
+                <!-- Duplicated Clockwork Sword, kept as is from original source -->
+                <div class="game-button-item"> <h4>Clockwork Sword</h4>
+                    <button class="image-button" onclick="navigateToClockworkSword()">
+                        <img src="ClockworkSword.png" alt="Clockwork Sword Game Screenshot">
+                    </button>
+                </div>
+
+                <!-- Duplicated Die-or-Beat Pharma, kept as is from original source -->
+                <div class="game-button-item"> <h4>Die-or-Beat Pharma</h4>
+                    <button class="image-button" onclick="navigateToDOBP()">
+                        <img src="DOBP.png" alt="Die-or-Beat Pharma Screenshot">
+                    </button>
+                </div>
+
+            </div>
         </div>
+    </section>
 
+    <section class="projects">
+        <div class="container">
+            <h2>Other Projects</h2>
+
+            <div class="game-buttons">
+                <div class="game-button-item"> <h4>3D Prints</h4>
+                    <button class="image-button" onclick="navigateTo3dPrints()">
+                        <img src="3dProjectImages/NatoshaBadgeFront.png" alt="3D Printed Badge">
+                    </button>
+                </div>
+
+            </div>
         </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="projects">
-    <div class="container">
-      <h2>Games</h2>
+    <footer>
+        <p>&copy; 2025 Erick Callisaya. All Rights Reserved.</p>
+    </footer>
 
-      <div class="game-buttons">
-        <div class="game-button-item"> <h4>A Tale of Two Paw-rtners</h4>
-          <button class="image-button" onclick="navigateToATOTP()">
-            <img src="ATOTP.png" alt="Project 1">
-          </button>
-        </div>
-
-        <div class="game-button-item"> <h4>Clockwork Sword</h4>
-          <button class="image-button" onclick="navigateToClockworkSword()">
-            <img src="ClockworkSword.png" alt="Project 2">
-          </button>
-        </div>
-
-        <div class="game-button-item"> <h4>Die-or-Beat Pharma</h4>
-          <button class="image-button" onclick="navigateToDOBP()">
-            <img src="DOBP.png" alt="Project 3">
-          </button>
-        </div>
-
-        </div>
-    </div>
-  </section>
-
-  <section class="projects">
-    <div class="container">
-      <h2>Other Projects</h2>
-
-      <div class="game-buttons">
-        <div class="game-button-item"> <h4>3d Prints</h4>
-          <button class="image-button" onclick="navigateTo3dPrints()">
-            <img src="3dProjectImages/NatoshaBadgeFront.png" alt="Project 10">
-          </button>
-        </div>
-
-        </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Erick Callisaya. All Rights Reserved.</p>
-  </footer>
-
-  <script>
-    function navigateToATOTP() {
-      window.location.href = "ATOTP.html";
-    }
-    function navigateToDOBP() {
-      window.location.href = "DOBP.html";
-    }
-    function navigateToClockworkSword() {
-      window.location.href = "ClockworkSword.html";
-    }
-    function navigateTo3dPrints() {
-      window.location.href = "3dPrints.html";
-    }
-    function navigateToDrawingApp() {
-      window.location.href = "DrawingApp.html";
-    }
-  </script>
+    <script>
+        function navigateToATOTP() {
+            window.location.href = "ATOTP.html";
+        }
+        function navigateToDOBP() {
+            window.location.href = "DOBP.html";
+        }
+        function navigateToClockworkSword() {
+            window.location.href = "ClockworkSword.html";
+        }
+        function navigateTo3dPrints() {
+            window.location.href = "3dPrints.html";
+        }
+        function navigateToDrawingApp() {
+            window.location.href = "DrawingApp.html";
+        }
+    </script>
 </body>
 </html>
